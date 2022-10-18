@@ -1,0 +1,8 @@
+<div *ngIf="mensajes.length">
+  <ul>
+    <li class="{{mensaje.nivel}}" *ngFor="let mensaje of mensajes">{{mensaje.texto}}</li>
+  </ul>
+  <p>
+    <a (click)="limpiarMensajes()">Limpiar mensajes</a>
+  </p>
+</div>

@@ -1,0 +1,15 @@
+<input #id type="hidden" id="id" value="{{cliente.id}}" />
+<div>
+  <div>
+    <label for="nombre">Nombre</label>
+    <input #nombre type="text" id="nombre" value="{{cliente.nombre}}" />
+  </div>
+  <div>
+    <label for="nif">NIF</label>
+    <input #nif type="text" id="nif" value="{{cliente.nif}}" />
+  </div>
+  <div>
+    <label>&nbsp;</label>
+    <button (click)="guardar(+id.value, nombre.value, nif.value)">Aceptar</button>
+  </div>
+</div>

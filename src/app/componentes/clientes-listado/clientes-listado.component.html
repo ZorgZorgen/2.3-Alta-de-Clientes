@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>Id</th><th>Nombre</th><th>NIF</th>
+      <th><a routerLink="/clientes/detalles">Añadir</a></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <th>{{cliente.id}}</th>
+      <td>{{cliente.nombre}}</td>
+      <td>{{cliente.nif}}</td>
+      <td>
+        <a routerLink="/clientes/detalles/{{cliente.id}}">Editar</a>&nbsp;
+        <a (click)="borrar(cliente.id)">Borrar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
